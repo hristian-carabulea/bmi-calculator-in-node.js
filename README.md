@@ -20,5 +20,5 @@
 ### Obese Class III	> 40
 ##
 ## Calculation:
-### BMI = kg/m2 (weight in kilograms over height in centimeres squaree)
+### BMI = kg/cm2 (weight in kilograms over height in centimeres squared)
 ### Example: weight = 81, height = 179cm, BMI = 25.3
