@@ -34,11 +34,10 @@ app.post("/", function(req, res) {
   console.log(req.body.height);
 
   var weight = Number(req.body.weight);
-  var height = Number(req.body.num2);
+  var height = Number(req.body.height / 100);
 
   var bmi = weight / (height * height);
   console.log("Your BMI is: " + bmi);
-  res.send("Your BMI is: " + bmi + ". ");
 
 /* 
   ## Underweight =< 18.5
@@ -47,25 +46,38 @@ app.post("/", function(req, res) {
   ## Obesity = BMI of 30 or greater
 */
 
-  switch(bmi) {
-    case "<= 18.5":
-      res.send("You are underweight.");
+  switch(true) {
+    case (bmi < 16):
+      res.send("Your BMI is: " + bmi + ". You are severly thin.");
       break;
 
-    case "> 18.5":
-    case "< 25":
-      res.send("You have a normal weight.");
+    case (bmi >= 16 && bmi <= 17):
+      res.send("Your BMI is: " + bmi + ". You are moderately thin.");
+      break;
+
+    case (bmi > 17 && bmi < 18.5):
+      res.send("Your BMI is: " + bmi + ". You are mildly thin.");
+      break;
+
+    case (bmi >= 18.5 && bmi < 25):
+      res.send("Your BMI is: " + bmi + ". You have a normal weight.");
+      break;
+
+    case (bmi >= 25 && bmi < 30):
+      res.send("Your BMI is: " + bmi + ". You are overweight.");
+      break;
+
+    case (bmi >= 30 && bmi < 35):
+      res.send("Your BMI is: " + bmi + ". You have obesity Class I.");
+      break;
+
+    case (bmi >= 35 && bmi < 40):
+      res.send("Your BMI is: " + bmi + ". You have obesity Class II.");
       break;
 
 
-    case ">= 25":
-    case "< 30":
-      res.send("You are overweight.");
-      break;
-
-
-    case ">= 30":
-      res.send("You are obese.");
+    case (bmi >= 40):
+      res.send("Your BMI is: " + bmi + ". You have obesity Class III.");
       break;
 
     default:

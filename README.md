@@ -8,10 +8,16 @@
 ### run program in command line: nodemon bmiCalculator.js
 ###
 ### BMI Categories:
-## Underweight =< 18.5
-## Normal weight = 18.5 <–> 24.9
-## Overweight = 25 <–> 29.9
-## Obesity = BMI of 30 or greater
+## https://www.calculator.net/bmi-calculator.html
+
+## Severe Thinness	< 16
+## Moderate Thinness	16 - 17
+## Mild Thinness	17 - 18.5
+## Normal	18.5 - 25
+## Overweight	25 - 30
+## Obese Class I	30 - 35
+## Obese Class II	35 - 40
+## Obese Class III	> 40
 ##
-## Calculation: BMI = kg/cm2 where kg is a person's weight in kilograms and cm2 is their height in centimeters squared
-## Example: weight = 81, height = 179cm, BMI = 32.05
+## Calculation: BMI = kg/m2 where kg is a person's weight in kilograms and m2 is their height in meters squared
+## Example: weight = 81, height = 179cm, BMI = 25.3
