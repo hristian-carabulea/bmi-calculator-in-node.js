@@ -83,7 +83,7 @@ app.post("/", function(req, res) {
       break;
 
     default:
-      res.send("You entered a incorrect data. Please try again. Weight: " + weight + ", height: "  + height);
+      res.send("You entered incorrect data. Please try again. Weight: " + weight + ", height: "  + height);
   }
 })
 
