@@ -3,6 +3,7 @@
 ### create remote repository, and git add, git commit, and git push to it
 ### npm init, and add remote repository
 ### npm install express
+### must install body-parser with npm install body-parser
 ### install nodemon:	npm install -g nodemon  ## this did work for me this time, a third time for a third package. The first time I installed it, I had to use sudo.
 ### 
 ### run program in command line: nodemon bmiCalculator.js
