@@ -36,7 +36,8 @@ app.post("/", function(req, res) {
   var weight = Number(req.body.weight);
   var height = Number(req.body.height / 100);
 
-  var bmi = weight / (height * height);
+  var bmi = round(weight / (height * height), 1);
+
   console.log("Your BMI is: " + bmi);
 
 /* 
@@ -92,3 +93,9 @@ app.listen(3000, function() {
   // console.log("Server started at http://localhost:${port}");
   console.log("Server is running on port 3000");
 });
+
+// give possibility to display a decimal number with a certain precision
+function round(value, precision) {
+  var multiplier = Math.pow(10, precision || 0);
+  return Math.round(value * multiplier) / multiplier;
+}
